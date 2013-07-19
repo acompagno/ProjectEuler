@@ -1,0 +1,14 @@
+import math
+
+x = math.pow(2.1000)
+
+stringy = str(x)
+
+total = 0
+for i in range (0,len(stringy)):
+    total = total + stringy[i]
+
+
+print (total)
+    
+
