@@ -14,4 +14,12 @@ def comb(n,r):
 	c = top / (bottom_1*bottom_2)
 	return c
 
-print(comb(23,10))
+count = 0
+for n in range (1,101):
+	for r in range (1,n):
+		com = comb(n,r)
+		if com > 1000000:
+			count=count+1
+
+
+print(count)
