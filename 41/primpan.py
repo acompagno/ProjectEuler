@@ -55,8 +55,9 @@ def pancheck(a):
 	else:
 		return False
 
-
-for i in range (7999999,0,-1):
-	if pancheck(i):
-		if isprime(i):
-			print(i)
+for a in range (0,1000000000000000000000,1000000):
+	for i in range (0+a,0,-1):
+		if pancheck(i):
+			if isprime(i):
+				print(i)
+				break
