@@ -38,6 +38,7 @@ class main  {
                 if(count == 10001)
                 {
                     System.out.println("Answer: "+i);
+                    break;
                 }
             }
             i++;
