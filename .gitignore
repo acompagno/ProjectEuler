@@ -18,4 +18,23 @@
 
 *.DS_Store
 
+<<<<<<< HEAD
+=======
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.DS_Store
+>>>>>>> ad8e637a0648f86650e5a2f6a453f669f1800d11
 *.class
