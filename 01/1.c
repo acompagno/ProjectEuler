@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
 
 int main ()
 {
@@ -12,5 +10,5 @@ int main ()
             z=z+i;
         }
     }
-    printf("%d",z);
+    printf("%d\n",z);
 }

@@ -2,9 +2,7 @@ import math
 def prime(x):
     z=0
     for b in range(2,x):
-        #print(b)
         if(x%b == 0):
-            #print("FACTOR",b)
             z+=1
     if(z==0):
         return 0
