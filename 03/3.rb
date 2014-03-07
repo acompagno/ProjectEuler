@@ -2,7 +2,7 @@ def isPrime(x)
 	if(x < 4) 
 		return true
 	end
-	for i in 2..(x/2)
+	for i in (3..(x/2)+1).step(2)
 		if (x % i == 0)
 			return false
 		end
@@ -12,14 +12,14 @@ end
 
 def main()
 	largest = 0
-	loopLimit = 600851475143**(0.5)
-	for i in 1..loopLimit.to_i
-		if (isPrime(i) && 600851475143%i == 0 && i > largest)
+	number = 600851475143
+	for i in (1..(number**(0.5)).to_i).step(2)
+		if (isPrime(i) && number%i == 0 && i > largest)
 			largest = i
 			puts i
 		end
 	end
-	puts i
+	puts largest
 end 
 
 if __FILE__ == $0
