@@ -1,30 +1,23 @@
-class main  {
-    public static boolean ispalindrome(int n)
+class main  
+{
+    public static boolean isPalindrome(int n)
     {
-        String temp = new StringBuffer(String.valueOf(n)).reverse().toString();
-        if (n==Integer.valueOf(temp))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        String reversedNum = new StringBuffer(String.valueOf(n)).reverse().toString();
+		return n == Integer.valueOf(reversedNum);
     }
 
     public static void main(String[] args) 
     {
-        int i,b , best = 0;
-        for (i = 999 ;i >= 100 ; i--)
-        {
-            for (b = 999 ; b >=100; b--)
+        int i , j , largest = 0;
+        for (i = 999 ; i >= 100 ; i--)
+		{
+            for (j = i ; j >=100 ; j--)
             {
-                if (ispalindrome(i*b) && i*b>best)
-                {
-                    best = i*b;
-                }
+				int temp  = i * j;
+                if (isPalindrome(temp) && temp > largest)
+                    largest = temp;
             }
         }
-        System.out.println("Answer: "+best);
+        System.out.println("Answer: " + largest);
     }
 }

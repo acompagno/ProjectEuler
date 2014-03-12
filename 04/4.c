@@ -1,27 +1,50 @@
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
+
+int isPalindrome(int n);
+void *reverseString(char *str);
 
 int main ()
 {
-    int i , b , c , num, array[6] = {0};
+    int i , j , largest = 0;
+	for (i = 999 ; i >= 100 ; i--)
+	{
+		for (j = i ; j >= 100 ; j--)
+		{
+			int temp = j * i;
+			if (isPalindrome(temp) && temp > largest)
+				largest = temp;	
+		}
+	}
+	printf("%d\n" , largest);
+}
 
-    for (i = 1000 ; i>100 ; i--)
-    {
-        for (b = 1000 ; b>100 ; b--)
-        {
-            c = i * b ;
-            num = c ;
-            while(num>0)
-            {
-               array[i--] = num%10;
-               num /=10;
-            }
-            if ( array[5] == array[0] && array[4]==array[1] && array[3]==array[2])
-            {
-                printf("%d",c);
-                break;
-            }
-        }
-    }
+int isPalindrome(int n)
+{
+	char intStr[7] , intStrRev[7];
+	sprintf(intStr , "%d", n);
+	sprintf(intStrRev , "%s" , intStr);
+	reverseString(intStrRev);
+	if (strcmp(intStrRev , intStr) == 0)
+		return 1;
+	else 
+		return 0;
+}
+
+/*
+*Reverse string function from the url below
+*http://www8.cs.umu.se/~isak/snippets/strrev.c
+*/
+void *reverseString(char *str)
+{
+	char *p1, *p2;
+	if (! str || ! *str)
+		return str;
+	for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+	{
+		*p1 ^= *p2;
+		*p2 ^= *p1;
+		*p1 ^= *p2;
+	}
+	return str;
 }

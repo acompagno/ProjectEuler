@@ -1,28 +1,20 @@
-class main  {
-    public static boolean is1to20div(int n)
+class main  
+{
+    public static boolean isDivByRange20(int n)
     {
-        int i;
-        for (i=1 ; i <= 20 ; i++)
+        for (int i = 20 ; i >= 2 ; i--)
         {
             if(n%i != 0)
-            {
                 return false;
-            }
         }
         return true;
     }
 
     public static void main(String[] args) 
     {
-        int i = 1;
-        while (true)
-        {
-            if (is1to20div(i))
-            {
-                System.out.println("Answer: "+i);
-                break;
-            }
-            i++;
-        }
+		int i = 20;
+		while (! isDivByRange20(i))
+			i += 20;
+		System.out.println(""+i);
     }
 }
