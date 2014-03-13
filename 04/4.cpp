@@ -19,8 +19,7 @@ int main()
 			largest = temp;
 		}
 	}
-	cout << largest;
-	cout << "\n";
+	cout << largest << "\n";
 }
 
 bool isPalindrome(int n)

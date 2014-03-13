@@ -1,47 +1,27 @@
-class main  {
-    public static boolean isprime(int n)
+class main
+{
+    public static void main (String[] args)
     {
-        int i;
-        if (n < 2)
+        int i = 1 , count = 0;
+        while (count != 10001)
         {
-            return false ;
-        }
-        else if (n == 2)
-        {
-            return true ;
-        }
-        else if (n % 2 == 0)
-        {
-            return false ;
-        }
-        else
-        {
-            for(i = 3 ; i < (int)(Math.sqrt(n))+2 ; i=i+2)
-            {
-                if (n%i == 0)
-                {
-                    return false;
-                }
-            } 
-            return true;
-        }
-    }
-
-    public static void main(String[] args) 
-    {
-        int i = 1 ,count = 0;
-        while (true)
-        {
-            if (isprime(i))
-            {
+            if (isPrime(i))
                 count++;
-                if(count == 10001)
-                {
-                    System.out.println("Answer: "+i);
-                    break;
-                }
-            }
-            i++;
+            i += 2;
         }
+        System.out.println("" + (i-2));
+    }
+    public static boolean isPrime(int n)
+    {
+        if (n < 4)
+            return true;
+        if (n % 2 == 0)
+            return false;
+        for (int i = 3 ; i <= (int)Math.pow(n , 0.5) ; i += 2)
+        {
+            if (n%i == 0)
+                return false;
+        }
+        return true;
     }
 }

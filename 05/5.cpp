@@ -9,8 +9,7 @@ int main()
 	long long i = 20;
 	while (! isDivByRange20(i))
 		i += 20;
-	cout << i;
-	cout << "\n";
+	cout << i << "\n";
 }
 
 bool isDivByRange20(long long n)

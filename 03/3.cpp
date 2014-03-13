@@ -13,8 +13,7 @@ int main()
 		if (num % i == 0 && isPrime(i))
 			largest = i;
 	}
-	cout << largest;
-	cout << "\n";
+	cout << largest << "\n";
 }
 
 bool isPrime(long long n)

@@ -12,6 +12,5 @@ int main()
 		if (a%2 == 0)
 			total += a;
 	}
-	cout << total;
-	cout << "\n";
+	cout << total << "\n";
 }

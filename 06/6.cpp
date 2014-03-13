@@ -10,6 +10,5 @@ int main()
 		sum += i;
 		square += i * i;
 	}
-	cout << (sum * sum - square);
-	cout << "\n";
+	cout << (sum * sum - square) << "\n";
 }
